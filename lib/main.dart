@@ -30,56 +30,68 @@ class NinjaCard extends StatelessWidget {
                 height: 60,
                 color:Colors.grey[200]
             ),
-            Text(
-              'NAME',
-              style: TextStyle(
-                  color: Colors.white,
-                letterSpacing: 2
-              ),
-            ),
-            SizedBox(height:10.0),
-            Text(
-              'SUBAHS KARKI',
-              style: TextStyle(
-                  color: Colors.amberAccent[200],
-                  letterSpacing: 2,
-                  fontSize: 28.0,
-                  fontWeight: FontWeight.bold
-              ),
-            ),
-            SizedBox(height:10.0),
-            Text(
-              'CURRENT NINJA LEVEL',
-              style: TextStyle(
-                  color: Colors.white,
+            Center(
+              child: Text(
+                'NAME',
+                style: TextStyle(
+                    color: Colors.white,
                   letterSpacing: 2
+                ),
               ),
             ),
             SizedBox(height:10.0),
-            Text(
-              '9',
-              style: TextStyle(
-                  color: Colors.amberAccent[200],
-                  letterSpacing: 2,
-                  fontSize: 28.0,
-                  fontWeight: FontWeight.bold,
+            Center(
+              child: Text(
+                'SUBAHS KARKI',
+                style: TextStyle(
+                    color: Colors.amberAccent[200],
+                    letterSpacing: 2,
+                    fontSize: 28.0,
+                    fontWeight: FontWeight.bold
+                ),
+              ),
+            ),
+            SizedBox(height:10.0),
+            Center(
+              child: Text(
+                'CURRENT NINJA LEVEL',
+                style: TextStyle(
+                    color: Colors.white,
+                    letterSpacing: 2
+                ),
+              ),
+            ),
+            SizedBox(height:10.0),
+            Center(
+              child: Text(
+                '9',
+                style: TextStyle(
+                    color: Colors.amberAccent[200],
+                    letterSpacing: 2,
+                    fontSize: 28.0,
+                    fontWeight: FontWeight.bold,
 
+                ),
               ),
             ),
             SizedBox(height:10.0),
             Row(
               children: <Widget>[
-                Icon(
-                  Icons.email,
-                  color: Colors.grey[400],
+                Center(
+                  child: Icon(
+                    Icons.email,
+                    color: Colors.grey[400],
+                  ),
                 ),
                 SizedBox(width: 10,),
-                Text(
-                  'skarki@uab.edu',
-                  style: TextStyle(
-                    color: Colors.amberAccent[700],
-                    letterSpacing: 1.0,
-                    fontSize: 18
+                Center(
+                  child: Text(
+                    'skarki@uab.edu',
+                    style: TextStyle(
+                      color: Colors.amberAccent[700],
+                      letterSpacing: 1.0,
+                      fontSize: 18
+                    ),
                   ),
                 )
               ],

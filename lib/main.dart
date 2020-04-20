@@ -4,7 +4,13 @@ void main() => runApp(MaterialApp(
   home: NinjaCard()
 ));
 
-class NinjaCard extends StatelessWidget {
+class NinjaCard extends StatefulWidget {
+  @override
+  _NinjaCardState createState() => _NinjaCardState();
+}
+
+class _NinjaCardState extends State<NinjaCard> {
+  int ninjaLevel = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,6 +20,15 @@ class NinjaCard extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.deepPurple[600],
         elevation: 0.0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          setState(() {
+            ninjaLevel += 1;
+          });
+        },
+        child: Icon((Icons.add)),
+        backgroundColor: Colors.grey,
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
@@ -64,7 +79,7 @@ class NinjaCard extends StatelessWidget {
             SizedBox(height:10.0),
             Center(
               child: Text(
-                '9',
+                '$ninjaLevel',
                 style: TextStyle(
                     color: Colors.amberAccent[200],
                     letterSpacing: 2,
@@ -77,28 +92,27 @@ class NinjaCard extends StatelessWidget {
             SizedBox(height:10.0),
             Row(
               children: <Widget>[
-                Center(
-                  child: Icon(
-                    Icons.email,
-                    color: Colors.grey[400],
-                  ),
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
                 ),
                 SizedBox(width: 10,),
-                Center(
-                  child: Text(
-                    'skarki@uab.edu',
-                    style: TextStyle(
-                      color: Colors.amberAccent[700],
-                      letterSpacing: 1.0,
-                      fontSize: 18
-                    ),
+                Text(
+                  'skarki@uab.edu',
+                  style: TextStyle(
+                    color: Colors.amberAccent[700],
+                    letterSpacing: 1.0,
+                    fontSize: 18
                   ),
                 )
               ],
-            )
+            ),
+
           ],
         ),
+
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         items: const<BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -114,4 +128,5 @@ class NinjaCard extends StatelessWidget {
     );
   }
 }
+
 
